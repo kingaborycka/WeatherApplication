@@ -1,0 +1,10 @@
+.weather {
+    margin-top: 200px;
+    height: 400px;
+    text-align: left;
+}
+body {
+    background-image: url('../Projekt_EDI/Zdjecia/Paris.jpg');
+    background-size: cover;
+    background-position: center;
+}
