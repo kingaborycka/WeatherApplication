@@ -8,3 +8,15 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.navbar-brand{
+    margin-top: 2%;
+}
+#navbarText{
+    position: absolute;
+    right: 20px;
+}
+.country_name{
+    margin-right: 5px;
+}
+
