@@ -3,20 +3,54 @@
     height: 400px;
     text-align: left;
 }
+
 body {
     background-image: url('../Projekt_EDI/Zdjecia/Paris.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.navbar-brand{
+.navbar-brand {
     margin-top: 2%;
 }
-#navbarText{
+
+#navbarText {
     position: absolute;
     right: 20px;
 }
-.country_name{
+
+.country_name {
     margin-right: 5px;
 }
 
+#sticky-footer {
+
+    height: 50px;
+    position: absolute !important;
+    bottom: 0px !important;
+    width: 100%;
+
+
+}
+
+#creator {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+#gitLink {
+
+    position: absolute !important;
+    right: 20px !important;
+    bottom: 6px;
+    background-color: #465881;
+    border-color: #465881;
+}
+
+#authors {
+
+    position: relative !important;
+    bottom: 12px !important;
+
+}
