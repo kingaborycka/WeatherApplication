@@ -26,8 +26,8 @@ body {
 #sticky-footer {
 
     height: 50px;
-    position: absolute !important;
-    bottom: 0px !important;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 
 
@@ -41,8 +41,8 @@ body {
 
 #gitLink {
 
-    position: absolute !important;
-    right: 20px !important;
+    position: absolute;
+    right: 20px;
     bottom: 6px;
     background-color: #465881;
     border-color: #465881;
@@ -50,7 +50,20 @@ body {
 
 #authors {
 
-    position: relative !important;
-    bottom: 12px !important;
+    position: relative;
+    bottom: 12px;
 
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+
+    min-height: 30%;
+    position: relative;
 }
