@@ -3,6 +3,7 @@
     height: 400px;
     text-align: left;
 }
+
 body {
     background-image: url('../Projekt_EDI/Zdjecia/Paris.jpg');
     background-size: cover;
@@ -26,3 +27,47 @@ body {
     
 };
 
+#sticky-footer {
+
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
+#creator {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+#gitLink {
+
+    position: absolute;
+    right: 20px;
+    bottom: 6px;
+    background-color: #465881;
+    border-color: #465881;
+}
+
+#authors {
+
+    position: relative;
+    bottom: 12px;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+
+    min-height: 30%;
+    position: relative;
+}
