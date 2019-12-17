@@ -23,8 +23,12 @@ body {
 .navbar{
     font-family: 'Cinzel', serif;
     height: 60px;
+    margin:0;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     
+}
+.navbar-brand {
+    margin-left: 50px;
 }
 
 #sticky-footer {
