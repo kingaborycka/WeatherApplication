@@ -1,4 +1,20 @@
 //API 
+
+document.getElementsByClassName("country_name")[0].onclick = function() {
+    document.getElementById("cityName").innerHTML = this.innerHTML
+}
+document.getElementsByClassName("country_name")[1].onclick = function() {
+    document.getElementById("cityName").innerHTML = this.innerHTML
+}
+document.getElementsByClassName("country_name")[2].onclick = function() {
+    document.getElementById("cityName").innerHTML = this.innerHTML
+}
+document.getElementsByClassName("country_name")[3].onclick = function() {
+    document.getElementById("cityName").innerHTML = this.innerHTML
+}
+document.getElementsByClassName("country_name")[4].onclick = function() {
+    document.getElementById("cityName").innerHTML = this.innerHTML
+}
 chartdata();
 
 function  chartdata() {
@@ -53,7 +69,7 @@ function  chartdata() {
             });
 
     };
-
+    
     // II wykres
     function chart2(h,t){
         var ctx2 = document.getElementById("myChart2").getContext('2d');
