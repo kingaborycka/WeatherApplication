@@ -37,7 +37,7 @@ function  chartdata() {
         var date = [];
         var hours = [];
         var temp = [];
-        var icon_id = []
+        var icon_id = [];
 
         data(this,date,hours,temp,icon_id);
         chart2(hours,temp);
@@ -49,7 +49,8 @@ function  chartdata() {
         
     };
     xhr.send(null);
-/* function  chartdata() {
+
+  /*function  chartdata() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET','dane.json');
     xhr.onreadystatechange = function(){
@@ -104,6 +105,8 @@ function  chartdata() {
     
     // II wykres
     function chart2(h,t){
+        $("canvas#myChart2").remove();
+        $("div.chart2").append('<canvas id="myChart2" height="inherit" width="inherit"></canvas>');
         var ctx2 = document.getElementById("myChart2").getContext('2d');
         var LineChart2 = new Chart(ctx2, {
             type: 'line',
@@ -120,6 +123,5 @@ function  chartdata() {
             },
             
             });
-
     };
 }
