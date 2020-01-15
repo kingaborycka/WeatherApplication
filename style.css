@@ -1,5 +1,5 @@
 .weather {
-    margin-top: 180px;
+    margin-top: 130px;
     margin-bottom: 150px;
     padding-bottom: 20px;
     text-align: left;
@@ -9,6 +9,7 @@ body {
     background-image: url('../Zdjecia/1.jpg');
     background-size: cover;
     background-position: center;
+    transition: all .8s ease-in;
 }
 
 #navbarText{
