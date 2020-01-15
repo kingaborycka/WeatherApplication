@@ -95,7 +95,8 @@ function  chartdata() {
         data(this,date,hours,temp,icon_id,rain);
         if(temp_button2==1 && rain_button2==0){chart2temp(hours,temp);}else{chart2rain(hours,rain)};
         document.getElementById("weather_icon").src = "http://openweathermap.org/img/wn/"+icon_id[0]+"@2x.png"
-    
+        document.getElementsByClassName('day')[0].innerText = date[0] + ', ' + hours[0];
+        document.getElementsByClassName('day')[1].innerText = date[0] + ', ' + hours[0];
     };
     xhr.send(null);
 };
@@ -143,7 +144,7 @@ function chart1temp(h,t){
         },
         
     });
-}; 
+}   ; 
 
 // I wykres opady krakow 
 function chart1rain(h,r){

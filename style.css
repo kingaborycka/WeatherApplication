@@ -1,5 +1,5 @@
 .weather {
-    margin-top: 200px;
+    margin-top: 100px;
     height: 400px;
     text-align: left;
 }
@@ -79,6 +79,7 @@ body {
 .chart{
     padding-top: 2%!important;
     background-color: #f8f9fa!important;
+    opacity: 0.5;
     
 }
 
@@ -93,4 +94,7 @@ body {
     width: 100px;
     right: 20px;
     top: 20px;
+}
+.day{
+    margin-left: 10px;
 }
