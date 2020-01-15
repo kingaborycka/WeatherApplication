@@ -1,11 +1,12 @@
 .weather {
-    margin-top: 200px;
-    height: 400px;
+    margin-top: 180px;
+    margin-bottom: 150px;
+    padding-bottom: 20px;
     text-align: left;
 }
 
 body {
-    background-image: url('../Zdjecia/2.jpg');
+    background-image: url('../Zdjecia/1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -32,13 +33,12 @@ body {
 }
 
 #sticky-footer {
-
-    height: 50px;
     position: absolute;
     bottom: 0;
+    text-align: center;
+    padding: 0;
     width: 100%;
-
-
+    margin: 0;
 }
 
 #creator {
@@ -48,18 +48,11 @@ body {
 }
 
 #gitLink {
-
-    position: absolute;
-    right: 20px;
-    bottom: 6px;
     background-color: #465881;
     border-color: #465881;
 }
 
 #authors {
-
-    position: relative;
-    bottom: 12px;
 
 }
 
@@ -93,4 +86,20 @@ body {
     width: 100px;
     right: 20px;
     top: 20px;
+}
+.btn {
+    margin: 10px;
+}
+#pm1 {
+    text-align: center;
+}
+#pm2 {
+    text-align: center;
+}
+.pm{
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
 }

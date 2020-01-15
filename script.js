@@ -2,14 +2,15 @@ var temp_button1 = 1;
 var rain_button1 = 0;
 var temp_button2 = 1;
 var rain_button2 = 0;
-//API 
-var city_ids = ["6619279","5128638","3451189","6455259","1796236"] 
+var city_ids = ["6619279","3996063","524901","6455259","1796236"] 
 var current_id = "6619279"
 var krakow_id = "3094802"
+
 document.getElementsByClassName("country_name")[0].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[0]
     $('body').css("background-image","url('../Zdjecia/1.jpg')")
+    air_quality("pm2","Sydney")
     chartdata()
     
 }
@@ -17,24 +18,27 @@ document.getElementsByClassName("country_name")[1].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[1];
     $('body').css("background-image","url('../Zdjecia/2.jpg')")
-    $('body').css("background-image","hidden")
+    air_quality("pm2","Mexico")
     chartdata()
 }
 document.getElementsByClassName("country_name")[2].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[2]
+    air_quality("pm2","Moscow")
     $('body').css("background-image","url('../Zdjecia/3.jpg')")
     chartdata()
 }
 document.getElementsByClassName("country_name")[3].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[3]
+    air_quality("pm2","Paris")
     $('body').css("background-image","url('../Zdjecia/4.jpg')")
     chartdata()
 }
 document.getElementsByClassName("country_name")[4].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[4]
+    air_quality("pm2","shanghai")
     $('body').css("background-image","url('../Zdjecia/5.jpg')")
     chartdata()
 };
@@ -209,5 +213,46 @@ function chart2rain(h,r){
         
     });
 };
+
+
+//Jakość powietrza
+
+function  air_quality(id,miasto) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "https://api.waqi.info/feed/"+miasto+"/?token=69fefa412d572ac2e6eb2cc34b7baf0134c1f809");
+    xhr.onreadystatechange = function(){
+        var air = JSON.parse(this.responseText)
+        var pm = air.data.iaqi.pm10.v
+        if (pm>200){
+            document.getElementById(id).innerText = "Bardzo zły"
+            document.getElementById(id).style.backgroundColor = "#990000"
+        }
+        if (pm<200){
+            document.getElementById(id).innerText = "Zły"
+            document.getElementById(id).style.backgroundColor = "#E40000"
+        }
+        if (pm<141){
+            document.getElementById(id).innerText = "Dostateczny"
+            document.getElementById(id).style.backgroundColor = "#E48100"
+        }
+        if (pm<101){
+            document.getElementById(id).innerText = "Umiarkowany"
+            document.getElementById(id).style.backgroundColor = "yellow"
+        }
+        if (pm<6120){
+            document.getElementById(id).innerText = "Dobry"
+            document.getElementById(id).style.backgroundColor = "#B0DD10"
+        }
+        if (pm<21){
+            document.getElementById(id).innerText = "Bardzo dobry"
+            document.getElementById(id).style.backgroundColor = "#58B109"
+        }
+    };
+    xhr.send(null);
+};
+air_quality("pm1","krakow")
+air_quality("pm2","Sydney")
+
 
 

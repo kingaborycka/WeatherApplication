@@ -19,28 +19,22 @@
     <!--Pasek nawigacyjny-->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand ">
-          <img src="sun.png" width="20" height="20" class="mr-2">POGODA
+          <img src="sun.png" width="20" height="20" class="mr-2">PORÓWNYWARKA POGODY
       </a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" style="float:right">
         <span class="navbar-toggler-icon"></span>
       </button>
             
-      <div class="collapse navbar-collapse" id="navbarText">
+      <div class="collapse navbar-collapse navbar-transparent" id="navbarText">
             <button class="btn btn-light country_name" id="country_name1">Sydney</button>
-            <button class="btn btn-light country_name">Nowy Jork</button>
-            <button class="btn btn-light country_name">Rio de Janeiro</button>
+            <button class="btn btn-light country_name">Meksyk</button>
+            <button class="btn btn-light country_name">Moskwa</button>
             <button class="btn btn-light country_name">Paryż</button>
             <button class="btn btn-light country_name">Szanghaj</button>
 
       </div>
     </nav>
-
-
-
-
-
-
     <!--Treść-->
     <div class='container'>
         <div class="row">
@@ -48,11 +42,16 @@
                 <div class="weather shadow card">
                     <div class="card-body chart1">    
                         <h3 class="card-title" style="font-family: 'Cinzel', serif;">Kraków</h3>
-                        <p style = 'margin-bottom: 0%;'>Data?Dzień tyg?</p style>
                         <img id="weather_icon1" src="http://openweathermap.org/img/wn/10d@2x.png">
-                        <button type="button" id="rain1" class="btn btn-light">Szansa opadów</button>
+                        <button type="button" id="rain1" class="btn btn-light">Opady</button>
                         <button type="button" id="temperature1" class="btn btn-light" style="float:left; margin-left:5px; margin-right:10px;">Temperatura</button>
                         <canvas id="myChart1" height="inherit" width="inherit"></canvas>
+                    </div>
+                    <div>
+                        <p style="text-align: center">Stan powietrza</p center">
+                        <div class="pm" role="alert">
+                            <p id="pm1"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,28 +59,27 @@
                 <div class="weather shadow card">
                     <div class="card-body chart2">
                         <h3 id="cityName" class="card-title" style="font-family: 'Cinzel', serif;">Sydney</h3>
-                        <p style = 'margin-bottom: 0%;'>Data?Dzień tyg?</p>
                         <img id="weather_icon" src="http://openweathermap.org/img/wn/10d@2x.png">
-                        <button type="button" id="rain2" class="btn btn-light">Szansa opadów</button>
+                        <button type="button" id="rain2" class="btn btn-light">Opady</button>
                         <button type="button" id="temperature2" class="btn btn-light" style="float:left; margin-left:5px; margin-right:10px;">Temperatura</button>
                         <canvas id="myChart2" height="inherit" width="inherit"></canvas>
-                        
+                    </div>
+                    <div>
+                        <p style="text-align: center">Stan powietrza</p>
+                        <div class="pm" role="alert">
+                            <p id="pm2"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-
-
-
-
-
     <!--Footer-->
     <div id="container">
         <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
             <div class="container text-center">
-                <small id="authors"><b>Autorzy:</b> <i>Bąk Dominik, Borycka Kinga, Ciesielski Adam <b>Photos by:</b> Keith Zhu, Luca Bravo, Augustin Diaz, Zhang Khaiyv</i></small>
+                <small id="authors"><b>Autorzy:</b> <i>Bąk Dominik, Borycka Kinga <b>Zdjęcia:</b> Keith Zhu, Luca Bravo, Augustin Diaz, Zhang Khaiyv z unsplash.com</i></small>
                 <small id="authors"><i> </i></small>
             </div>
             <a id="gitLink" class="btn btn-primary" href="https://github.com/bakdominik/Projekt_EDI/" role="button">Projekt na Githubie</a>
