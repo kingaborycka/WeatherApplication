@@ -6,9 +6,10 @@
 }
 
 body {
-    background-image: url('../Zdjecia/1.jpg');
+    background-image: url('Zdjecia/1.jpg');
     background-size: cover;
     background-position: center;
+    transition: .8s ease-in;
 }
 
 #navbarText{
@@ -90,10 +91,12 @@ body {
     margin: 10px;
 }
 #pm1 {
-    text-align: center;
+    text-align: center; 
+    border-radius: 10px;
 }
 #pm2 {
     text-align: center;
+    border-radius: 10px;
 }
 .pm{
     margin: 0 auto;
