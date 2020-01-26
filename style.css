@@ -1,15 +1,16 @@
 .weather {
-    margin-top: 130px;
-    margin-bottom: 150px;
+
+    margin-top: 15%;
+    margin-bottom: 15%px;
     padding-bottom: 20px;
     text-align: left;
 }
 
 body {
-    background-image: url('../Zdjecia/1.jpg');
+    background-image: url('Zdjecia/1.jpg');
     background-size: cover;
     background-position: center;
-    transition: all .8s ease-in;
+    transition: .8s ease-in;
 }
 
 #navbarText{
@@ -53,9 +54,7 @@ body {
     border-color: #465881;
 }
 
-#authors {
 
-}
 
 html,
 body {
@@ -73,6 +72,7 @@ body {
 .chart{
     padding-top: 2%!important;
     background-color: #f8f9fa!important;
+    opacity: 0.5;
     
 }
 
@@ -92,10 +92,12 @@ body {
     margin: 10px;
 }
 #pm1 {
-    text-align: center;
+    text-align: center; 
+    border-radius: 10px;
 }
 #pm2 {
     text-align: center;
+    border-radius: 10px;
 }
 .pm{
     margin: 0 auto;

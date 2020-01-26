@@ -9,7 +9,7 @@ var krakow_id = "3094802"
 document.getElementsByClassName("country_name")[0].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[0]
-    $('body').css("background-image","url('../Zdjecia/1.jpg')")
+    $('body').css("background-image","url('Zdjecia/1.jpg')")
     air_quality("pm2","Sydney")
     chartdata()
     
@@ -17,7 +17,7 @@ document.getElementsByClassName("country_name")[0].onclick = function() {
 document.getElementsByClassName("country_name")[1].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[1];
-    $('body').css("background-image","url('../Zdjecia/2.jpg')")
+    $('body').css("background-image","url('Zdjecia/2.jpg')")
     air_quality("pm2","Mexico")
     chartdata()
 }
@@ -25,21 +25,21 @@ document.getElementsByClassName("country_name")[2].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[2]
     air_quality("pm2","Moscow")
-    $('body').css("background-image","url('../Zdjecia/3.jpg')")
+    $('body').css("background-image","url('Zdjecia/3.jpg')")
     chartdata()
 }
 document.getElementsByClassName("country_name")[3].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[3]
     air_quality("pm2","Paris")
-    $('body').css("background-image","url('../Zdjecia/4.jpg')")
+    $('body').css("background-image","url('Zdjecia/4.jpg')")
     chartdata()
 }
 document.getElementsByClassName("country_name")[4].onclick = function() {
     document.getElementById("cityName").innerHTML = this.innerHTML
     current_id = city_ids[4]
     air_quality("pm2","shanghai")
-    $('body').css("background-image","url('../Zdjecia/5.jpg')")
+    $('body').css("background-image","url('Zdjecia/5.jpg')")
     chartdata()
 };
 //szansa opadów
@@ -99,7 +99,8 @@ function  chartdata() {
         data(this,date,hours,temp,icon_id,rain);
         if(temp_button2==1 && rain_button2==0){chart2temp(hours,temp);}else{chart2rain(hours,rain)};
         document.getElementById("weather_icon").src = "http://openweathermap.org/img/wn/"+icon_id[0]+"@2x.png"
-    
+        document.getElementsByClassName('day')[0].innerText = date[0] + ', ' + hours[0];
+        document.getElementsByClassName('day')[1].innerText = date[0] + ', ' + hours[0];
     };
     xhr.send(null);
 };
@@ -147,7 +148,7 @@ function chart1temp(h,t){
         },
         
     });
-}; 
+}   ; 
 
 // I wykres opady krakow 
 function chart1rain(h,r){
